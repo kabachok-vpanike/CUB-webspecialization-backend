@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '/settingsStyle.css' %}">
+    <title>Settings</title>
+    <script src="{% static 'settings.js' %}"></script>
+</head>
+
+<body>
+    <div class="rectangleBack" id="rectangleBack"></div>
+    <div class="rectangle" id="rectangle">
+        <div class="optionButtons">
+            <input type="button" value="Difficulty level" id="1" onclick="difficultLevel()">
+            <input type="button" value="Visuals" id="2" onclick="visuals()">
+            <input type="button" value="Language" id="3" onclick="language()">
+            <input type="button" value="Timer display" id="4" onclick="timerDisplay()">
+            <input type="button" value="Vocabulary categories" id="5" onclick="vocabCategories()">
+            <input type="button" value="Feedback & progress" id="6" onclick="feedbackAndProgress()">
+            <input type="button" value="Back" id="back" onclick="
+            var rect = document.getElementById('rectangle'); 
+            var rectBack=document.getElementById('rectangleBack');
+            rect.style.top = '0%';
+            rectBack.style.top = '0%';
+            rect.style.opacity = '0';
+            rectBack.style.opacity = '0';
+            setTimeout((doc) => doc.location.href='/question', 900, document);">
+        </div>
+        <div class="options" id="options"></div>
+    </div>
+</body>
+
+</html>
